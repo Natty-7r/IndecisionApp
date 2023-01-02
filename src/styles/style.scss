@@ -1,0 +1,11 @@
+@import './setting';
+@import './base';
+@import './styleComponents/header.scss';
+@import './styleComponents/buttons.scss';
+@import './styleComponents/widget.scss';
+@import './styleComponents/addoptions.scss';
+@import './styleComponents/modal.scss';
+
+* {
+	font-family: Helvetica, Arial, sans-serif;
+}

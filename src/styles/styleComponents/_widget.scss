@@ -1,0 +1,40 @@
+.widget-header {
+	background-color: $light_blue;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-transform: capitalize;
+	color: $off_white;
+	padding: $small;
+	h2 {
+		margin: 0rem;
+		letter-spacing: 0.1rem;
+	}
+}
+.widget {
+	background-color: $lighter_blue;
+	.widget-sub-header {
+		padding: $mediem;
+		text-align: center;
+		font-size: 1.8rem;
+		color: $off_white;
+		border-bottom: solid 0.2rem lighten($lighter_blue, 10%);
+	}
+	.options-list {
+		color: white;
+		list-style: decimal;
+
+		.option {
+			padding: 1.2rem $small;
+			font-size: $small;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.option__text {
+				font-size: 2rem;
+				color: white;
+				margin: 0rem;
+			}
+		}
+	}
+}

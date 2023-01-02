@@ -1,0 +1,41 @@
+class Counter extends React.Component {
+	constructor(props) {
+		super(props);
+		this.addOne = this.addOne.bind(this);
+		this.minuseOne = this.minuseOne.bind(this);
+		this.reset = this.reset.bind(this);
+		this.state = { counter: this.props.count };
+	}
+	addOne() {
+		this.setState((prevstate) => ({ counter: prevstate.counter + 1 }));
+	}
+	minuseOne() {
+		this.setState((prevstate) => ({ counter: this.state.counter - 1 }));
+	}
+	reset() {
+		this.setState({ counter: 0 });
+	}
+	componentDidMount() {
+		let countData = JSON.parse(localStorage.getItem('count'));
+		if (countData) this.setState(() => ({ counter: countData.counter }));
+	}
+	componentDidUpdate() {
+		localStorage.setItem('count', JSON.stringify(this.state));
+	}
+	render() {
+		return (
+			<div>
+				<h1>Count:{this.state.counter} </h1>
+				<button onClick={this.addOne}>+1</button>{' '}
+				<button onClick={this.minuseOne}>-1</button>
+				{'  '}
+				<button onClick={this.reset}>reset</button>
+			</div>
+		);
+	}
+}
+Counter.defaultProps = {
+	count: 0,
+};
+
+export default Counter;

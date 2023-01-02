@@ -1,0 +1,27 @@
+.widget-form {
+	.form_error-message {
+		font-size: 1.8rem;
+		padding-left: $small;
+		color: darken($off_white, 5%);
+		letter-spacing: 0.1rem;
+		font-weight: 500;
+	}
+	.form-actions {
+		display: flex;
+		justify-content: space-between;
+		padding: $small;
+
+		input {
+			background-color: $off_black;
+			border: none;
+			color: white;
+			padding-left: $small;
+			flex-grow: 1;
+			outline: none;
+		}
+		input:hover {
+			border: none;
+			outline: none;
+		}
+	}
+}
